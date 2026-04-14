@@ -103,7 +103,7 @@ public class FirstPersonController : MonoBehaviour
         controller.Move(moveDir * Time.deltaTime);
 
 
-        print("==================" + controller.velocity);
+        print( controller.velocity);
         float magnitud = Mathf.Abs(controller.velocity.magnitude); //Largo del vector
         print(magnitud);
         animator.SetFloat("Speed", magnitud);
@@ -113,7 +113,7 @@ public class FirstPersonController : MonoBehaviour
     {
         if (!controller.isGrounded) return;
 
-        animator.SetBool("Jump" ,true);
+        animator.SetTrigger("Jump");
 
         verticalVelocity = jumpForce;
     }

@@ -384,8 +384,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 142473294}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.26755807, y: 0.6535535, z: -0.26658902, w: -0.65590465}
-  m_LocalPosition: {x: 21.590485, y: 13.340424, z: -3.9285088}
+  m_LocalRotation: {x: 0.25340143, y: -0.000000018548569, z: 0.000000004858819, w: 0.9673612}
+  m_LocalPosition: {x: 3.580946, y: 3.52, z: -12.954652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -651,7 +651,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 703594981}
     m_Modifications:
     - target: {fileID: 4734318341502266553, guid: 0434b31fb13133745b4b637d86574be6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,7 +659,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734318341502266553, guid: 0434b31fb13133745b4b637d86574be6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 4734318341502266553, guid: 0434b31fb13133745b4b637d86574be6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -868,6 +868,7 @@ Transform:
   - {fileID: 777795109}
   - {fileID: 1132817995}
   - {fileID: 1398053390}
+  - {fileID: 1409358849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &777795103
@@ -2966,8 +2967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 20
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -3005,7 +3006,7 @@ Transform:
   m_GameObject: {fileID: 1024524165}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534014, y: -0.000000018548567, z: 0.0000000048588182, w: 0.9673613}
-  m_LocalPosition: {x: 3.580946, y: 2.18, z: -12.954652}
+  m_LocalPosition: {x: 3.580946, y: 3.52, z: -12.954652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3433,7 +3434,7 @@ MonoBehaviour:
     Position: 0
     Units: 1
   SplineOffset: {x: 0, y: 0, z: 0}
-  CameraRotation: 0
+  CameraRotation: 1
   Damping:
     Enabled: 0
     Position: {x: 0, y: 0, z: 0}
@@ -3465,14 +3466,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 10
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1409358849}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -3503,8 +3504,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215162008}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18166195, y: -0.5201301, z: 0.114297986, w: 0.8266798}
-  m_LocalPosition: {x: -16.44711, y: -0.0000024153778, z: -8.793446}
+  m_LocalRotation: {x: 0.10308656, y: 0.7022998, z: -0.103919685, w: 0.6966699}
+  m_LocalPosition: {x: -16.44711, y: 7.33, z: -8.793446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3864,7 +3865,7 @@ MonoBehaviour:
   verticalVelocity: 0
   jumpForce: 10
   pushForce: 4
-  dashForce: 0
+  dashForce: 6
   dashDuration: 0.2
   moveInput: {x: 0, y: 0}
 --- !u!143 &1409358853
@@ -3885,13 +3886,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.9
+  m_Radius: 0.13
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.92, z: 0}
 --- !u!43 &1572191455
 Mesh:
   m_ObjectHideFlags: 0
@@ -5102,7 +5103,7 @@ Transform:
   m_GameObject: {fileID: 2102502013}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.44711, y: -0.0000024153778, z: -8.793446}
+  m_LocalPosition: {x: -16.44711, y: 7.33, z: -8.793446}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5191,7 +5192,6 @@ SceneRoots:
   - {fileID: 142473297}
   - {fileID: 1024524171}
   - {fileID: 703594981}
-  - {fileID: 231581482}
   - {fileID: 2144045646}
   - {fileID: 1215162012}
   - {fileID: 1706155776}
