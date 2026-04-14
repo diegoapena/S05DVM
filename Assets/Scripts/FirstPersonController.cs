@@ -1,4 +1,5 @@
 using Unity.Cinemachine;
+using Unity.Cinemachine.Samples;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public class FirstPersonController : MonoBehaviour
     public InputSystem_Actions inputs;
     private CharacterController controller;
     public CinemachineCamera characterCamera;
+    public Animator animator;
 
 
 
@@ -78,7 +80,9 @@ public class FirstPersonController : MonoBehaviour
        
 
         Vector3 moveDir = (cameraForwardDir * moveInput.y + transform.right * moveInput.x) * moveSpeed;
-
+        float magnitud = Mathf.Abs(controller.velocity.magnitude);
+        print(magnitud);
+        animator.SetFloat("Speed", magnitud);
 
         verticalVelocity += Physics.gravity.y * Time.deltaTime;
 
@@ -87,6 +91,7 @@ public class FirstPersonController : MonoBehaviour
 
 
         moveDir.y = verticalVelocity;
+        animator.SetBool("Grounded", controller.isGrounded);
 
 
         if (IsDashing)
@@ -105,6 +110,7 @@ public class FirstPersonController : MonoBehaviour
     private void OnJump(InputAction.CallbackContext context)
     {
         if (!controller.isGrounded) return;
+        animator.SetBool("Jump",true);
 
         verticalVelocity = jumpForce;
     }
