@@ -81,7 +81,7 @@ public class FirstPersonController : MonoBehaviour
 
         Vector3 moveDir = (cameraForwardDir * moveInput.y + transform.right * moveInput.x) * moveSpeed;
         float magnitud = Mathf.Abs(controller.velocity.magnitude);
-        print(magnitud);
+        //print(magnitud);
         animator.SetFloat("Speed", magnitud);
 
         verticalVelocity += Physics.gravity.y * Time.deltaTime;
