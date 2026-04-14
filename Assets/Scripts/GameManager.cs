@@ -5,8 +5,9 @@ using Sirenix.OdinInspector;
 
 public class GameManager : MonoBehaviour
 {
-    public CinemachineCamera camA;
-    public CinemachineCamera camB;
+    /*
+    public CinemachineCameraController camA;
+    public CinemachineCameraController camB;
 
 
     [Button("Transition")]
@@ -27,4 +28,5 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Camera transition finished!");
     }
+    */
 }
