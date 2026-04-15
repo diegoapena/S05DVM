@@ -6,9 +6,8 @@ using UnityEngine.Splines;
 public enum Cameras
 {
     Camera_1,
-    Camera_2,
-    Camera_3, 
-    Camera_4,
+    Camera_2, 
+    Camera_3,
     CameraDefault,
 }
 public class CinemachineCameraController : MonoBehaviour
@@ -32,22 +31,21 @@ public class CinemachineCameraController : MonoBehaviour
     }
 
     public void SwitchCamera()
-    {
-        
-        counter += Time.deltaTime;
+    {      
         NextCam();
     }
     
     public void NextCam()
     {
+        counter += Time.deltaTime;
         switch (Numcam)
-        {
+        {           
             case Cameras.Camera_1:
-                if (counter>=10)
+                if(counter>=10)
                 {
-                    Numcam= Cameras.Camera_2;
-                    camA.Priority = 20; 
-                    CamerasCount = 1;                                  
+                    Numcam = Cameras.Camera_2;
+                    camB.Priority = 30;
+                    CamerasCount ++;
                 }
                 break;
 
@@ -55,34 +53,23 @@ public class CinemachineCameraController : MonoBehaviour
                 if(counter>=20)
                 {
                     Numcam = Cameras.Camera_3;
-                    camB.Priority = 30;
-                    CamerasCount = 2;
+                    camC.Priority = 40;
+                    CamerasCount ++;
                 }
                 break;
 
             case Cameras.Camera_3:
-                if(counter>=30)
+                if(counter>=25)
                 {
-                    Numcam = Cameras.Camera_4;
-                    camC.Priority = 40;
-                    CamerasCount = 3;
-                }
-                break;
-
-            case Cameras.Camera_4:
-                if(counter>=40)
-                {
-                    Numcam = Cameras.CameraDefault;
+                    Numcam = Cameras.CameraDefault;                   
                     camD.Priority = 50;                   
-                    CamerasCount = 4;
+                    CamerasCount ++;                   
                 }
+                
                 break;
-            case Cameras.CameraDefault:
-                if(counter>=50)
-                {
-                    ResetCam();                   
-                    Numcam = Cameras.Camera_1;                  
-                } 
+            case Cameras.CameraDefault:               
+                //ResetCam();
+                counter *= 0;
                 break;
         }
     }
@@ -92,8 +79,7 @@ public class CinemachineCameraController : MonoBehaviour
         camA.Priority = 10;
         camB.Priority = 10;
         camC.Priority = 10;
-        camD.Priority = 10;
-        counter = 0;
-        CamerasCount = 1;
+        camD.Priority = 10;      
+        CamerasCount = 1;       
     }
 }
