@@ -46,7 +46,8 @@ public class CinemachineCameraController : MonoBehaviour
                 if (counter>=10)
                 {
                     Numcam= Cameras.Camera_2;
-                    camA.Priority = 20;                  
+                    camA.Priority = 20; 
+                    CamerasCount = 1;                                  
                 }
                 break;
 
@@ -71,9 +72,8 @@ public class CinemachineCameraController : MonoBehaviour
             case Cameras.Camera_4:
                 if(counter>=40)
                 {
-
-                    camD.Priority = 50;
                     Numcam = Cameras.CameraDefault;
+                    camD.Priority = 50;                   
                     CamerasCount = 4;
                 }
                 break;
