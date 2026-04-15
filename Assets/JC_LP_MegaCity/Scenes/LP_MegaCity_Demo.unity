@@ -34494,7 +34494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4734318341502266553, guid: 0434b31fb13133745b4b637d86574be6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.27
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4734318341502266553, guid: 0434b31fb13133745b4b637d86574be6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -157161,13 +157161,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 20
+    m_Value: 40
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1409358849}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -157199,7 +157199,7 @@ Transform:
   m_GameObject: {fileID: 1024524165}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2534014, y: -0.000000018548567, z: 0.0000000048588182, w: 0.9673613}
-  m_LocalPosition: {x: -132.5, y: 3.52, z: 193.6}
+  m_LocalPosition: {x: -132.5, y: 2.77, z: 193.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -157221,7 +157221,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 1
   FrequencyGain: 1
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: 399.27887, y: 934.04846, z: 887.6128}
 --- !u!1001 &1024639066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177835,7 +177835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 1
+    m_Value: 30
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -177872,7 +177872,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159870217}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.037277088, y: -0.10059022, z: 0.0023247008, w: 0.9942267}
+  m_LocalRotation: {x: 0.08084605, y: -0.10026496, z: 0.006730037, w: 0.99164796}
   m_LocalPosition: {x: -130.8121, y: 1.9, z: 189.34839}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -191503,7 +191503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 30
+    m_Value: 20
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -209226,8 +209226,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CinemachineCameraController
   camA: {fileID: 1241131719}
   camB: {fileID: 1159870220}
+  camC: {fileID: 1024524170}
+  camD: {fileID: 2144045645}
+  Numcam: 0
   switchTime: 10
   counter: 0
+  CamerasCount: 1
 --- !u!1001 &1356862544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218983,8 +218987,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418148944}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15681535, y: -0.530412, z: 0.10057441, w: 0.8270169}
-  m_LocalPosition: {x: -42.53714, y: 31.048283, z: 106.873924}
+  m_LocalRotation: {x: -0.26755807, y: 0.6535535, z: -0.26658902, w: -0.65590465}
+  m_LocalPosition: {x: -114.49046, y: 13.340424, z: 202.62614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -331998,13 +332002,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
   Priority:
     Enabled: 1
-    m_Value: 10
+    m_Value: 50
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
   m_LegacyPriority: 0
   Target:
-    TrackingTarget: {fileID: 0}
+    TrackingTarget: {fileID: 1024524171}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
