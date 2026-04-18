@@ -17,8 +17,7 @@ public class CinemachineCameraController : MonoBehaviour
     public CinemachineCamera camC;
     public CinemachineCamera camD;
     public Cameras Numcam;
-    public float counter;
-    public int CamerasCount;
+    public float counter;   
     void Start()
     {
 
@@ -37,24 +36,21 @@ public class CinemachineCameraController : MonoBehaviour
     
     public void NextCam()
     {
-        counter += Time.deltaTime;
+        counter += Time.deltaTime;      
         switch (Numcam)
         {           
             case Cameras.Camera_1:
                 if(counter>=10)
                 {
                     Numcam = Cameras.Camera_2;
-                    camB.Priority = 30;
-                    CamerasCount ++;
+                    camB.Priority = 30;                    
                 }
                 break;
-
             case Cameras.Camera_2:
                 if(counter>=20)
                 {
                     Numcam = Cameras.Camera_3;
-                    camC.Priority = 40;
-                    CamerasCount ++;
+                    camC.Priority = 40;                    
                 }
                 break;
 
@@ -62,24 +58,16 @@ public class CinemachineCameraController : MonoBehaviour
                 if(counter>=25)
                 {
                     Numcam = Cameras.CameraDefault;                   
-                    camD.Priority = 50;                   
-                    CamerasCount ++;                   
+                    camD.Priority = 50;                                                     
                 }
                 
                 break;
             case Cameras.CameraDefault:               
-                //ResetCam();
+                
+                GameManager.Instance.playerController.OnMove();                
                 counter *= 0;
                 break;
         }
     }
-    
-    public void ResetCam()
-    {
-        camA.Priority = 10;
-        camB.Priority = 10;
-        camC.Priority = 10;
-        camD.Priority = 10;      
-        CamerasCount = 1;       
-    }
+        
 }

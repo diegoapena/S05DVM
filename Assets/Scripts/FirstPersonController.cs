@@ -27,7 +27,6 @@ public class FirstPersonController : MonoBehaviour
     {
         inputs = new();
         controller = GetComponent<CharacterController>();
-
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
@@ -52,20 +51,17 @@ public class FirstPersonController : MonoBehaviour
     }
     void Update()
     {
-
-        OnMove();        
+             
     }
 
     public void OnMove()
     {
         Vector3 cameraForwardDir = characterCamera.transform.forward;
         cameraForwardDir.y = 0;
-        cameraForwardDir.Normalize();
-    
+        cameraForwardDir.Normalize();    
        Quaternion targetQuaternion = Quaternion.LookRotation(cameraForwardDir);
        transform.rotation = targetQuaternion;
             
-
         Vector3 moveDir = (cameraForwardDir * moveInput.y + transform.right * moveInput.x) * moveSpeed;
 
 
