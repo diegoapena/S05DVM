@@ -69,7 +69,7 @@ public class CinemachineCameraController : MonoBehaviour
             case Cameras.CameraDefault:               
                 
                 GameManager.Instance.playerController.OnMove();                
-                Seconds *= 0;
+                Seconds = 25;
                 break;
         }
     }
