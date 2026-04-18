@@ -68,7 +68,8 @@ public class CinemachineCameraController : MonoBehaviour
                 break;
             case Cameras.CameraDefault:               
                 
-                GameManager.Instance.playerController.OnMove();                
+                GameManager.Instance.playerController.OnMove();
+                textMesh.text ="Objetivo :" + "Ve al lugar indicado he investiga";
                 Seconds = 25;
                 break;
         }
