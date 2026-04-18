@@ -189787,7 +189787,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 413.88, y: 50}
+  m_SizeDelta: {x: 430, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1230651807
 MonoBehaviour:
@@ -332349,8 +332349,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144045644}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.17293975, y: -0.67569286, z: 0.16772617, w: -0.6967059}
-  m_LocalPosition: {x: -18.70259, y: 22.848465, z: 161.0985}
+  m_LocalRotation: {x: 0.10374775, y: 0.6853354, z: -0.0995876, w: 0.7138867}
+  m_LocalPosition: {x: -31.829834, y: 28.151123, z: 161.76508}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
