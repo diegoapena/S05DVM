@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using TMPro;
 using Unity.Cinemachine;
 using UnityEditor.Rendering;
 using UnityEngine;
@@ -17,7 +18,9 @@ public class CinemachineCameraController : MonoBehaviour
     public CinemachineCamera camC;
     public CinemachineCamera camD;
     public Cameras Numcam;
-    public float counter;   
+    public float Seconds;
+    public int Minutes;
+    public TextMeshProUGUI textMesh;
     void Start()
     {
 
@@ -36,18 +39,19 @@ public class CinemachineCameraController : MonoBehaviour
     
     public void NextCam()
     {
-        counter += Time.deltaTime;      
+        Seconds += Time.deltaTime;     
+        textMesh.text ="Time : "+ Minutes.ToString() + ":" + Seconds.ToString("f0");
         switch (Numcam)
         {           
             case Cameras.Camera_1:
-                if(counter>=10)
+                if(Seconds>=10)
                 {
                     Numcam = Cameras.Camera_2;
                     camB.Priority = 30;                    
                 }
                 break;
             case Cameras.Camera_2:
-                if(counter>=20)
+                if(Seconds>=20)
                 {
                     Numcam = Cameras.Camera_3;
                     camC.Priority = 40;                    
@@ -55,7 +59,7 @@ public class CinemachineCameraController : MonoBehaviour
                 break;
 
             case Cameras.Camera_3:
-                if(counter>=25)
+                if(Seconds>=25)
                 {
                     Numcam = Cameras.CameraDefault;                   
                     camD.Priority = 50;                                                     
@@ -65,7 +69,7 @@ public class CinemachineCameraController : MonoBehaviour
             case Cameras.CameraDefault:               
                 
                 GameManager.Instance.playerController.OnMove();                
-                counter *= 0;
+                Seconds *= 0;
                 break;
         }
     }
