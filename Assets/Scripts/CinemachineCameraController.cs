@@ -49,14 +49,14 @@ public class CinemachineCameraController : MonoBehaviour
                 if(Seconds>=10)
                 {
                      AllCameras= Cameras.Camera02;
-                    camA.Priority = 30;                    
+                    camB.Priority = 30;                    
                 }
                 break;
             case Cameras.Camera02:
                 if(Seconds>=20)
                 {
                     AllCameras= Cameras.Camera03;
-                    camB.Priority = 40;                    
+                    camC.Priority = 40;                    
                 }
                 break;
 
