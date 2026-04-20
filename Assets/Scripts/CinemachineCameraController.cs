@@ -42,7 +42,7 @@ public class CinemachineCameraController : MonoBehaviour
     public void NextCam()
     {
         Seconds += Time.deltaTime;     
-        textMesh.text ="Time : "+ Minutes.ToString() + ":" + Seconds.ToString("f0");
+        textMesh.text = Minutes.ToString() + ":" + Seconds.ToString("f0");
         switch (AllCameras)
         {           
             case Cameras.Camera01:
